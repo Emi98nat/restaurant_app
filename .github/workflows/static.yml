@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    branches-ignored: ["ignore"]
+    branches-ignore: ["ignore"]
     paths: ".github/*"
 
   # Allows you to run this workflow manually from the Actions tab
