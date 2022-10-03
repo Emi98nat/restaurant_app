@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(
+    102.7deg,
+    rgb(253, 218, 255) 8.2%,
+    rgb(223, 173, 252) 19.6%,
+    rgb(173, 205, 252) 36.8%,
+    rgb(173, 252, 244) 73.2%,
+    rgb(202, 248, 208) 90.9%
+  );
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h1 {
+  text-align: center;
+  padding: 2px 0 5px;
+  color: blueviolet;
+  font-size: 50px;
+  position: relative;
+  top: -10px;
+}
+h2 {
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  text-decoration: underline brown;
+  color: blueviolet;
+}
+ul {
+  padding: 25px 0;
+  display: block;
+}
+li {
+  font-size: 24px;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  margin: 10px 0 40px;
+  padding: 5px 0 20px;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  top: -50px;
+}
+li:hover {
+  cursor: pointer;
+  background-color: #f2d2bd;
+  color: blueviolet;
+}
+i {
+  color: brown;
+  position: relative;
+}
+img {
+  object-fit: cover;
+  width: 215px;
+  height: 150px;
+  border-radius: 20px;
+}
+p {
+  font-size: 15px;
+  font-family: cursive;
+}
+button {
+  text-align: center;
+  justify-content: center;
+  display: block;
+  margin: 30px 24rem;
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  padding: 15px 50px;
+  font-size: 20px;
+  background-color: bisque;
+  color: blueviolet;
+  transition: all 200ms ease-in-out;
+  box-shadow: 5px 5px 10px rgba(146, 31, 31, 0.8);
+}
+button:hover {
+  background-color: #f2d2bd;
+  color: brown;
+  cursor: grabbing;
+}
+footer {
+  margin-left: 80px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 12px;
+  position: fixed;
+  bottom: -10px;
+}
+.container {
+  width: 50%;
+  height: 33rem;
+}
+.sidebar {
+  background-color: black;
+  display: block;
+  margin: 10px 15px 5px;
+  width: 5%;
+  height: 31rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(146, 31, 31, 0.8);
+  position: fixed;
+  top: -3px;
+}
+
+.menu {
+  margin: 2px 15px 5px 0;
+  width: 50%;
+  position: fixed;
+  top: -10px;
+  left: 80px;
+}
+.menu:hover {
+  cursor: pointer;
+}
+.image {
+  display: flex;
+  text-align: center;
+}
+.food {
+  display: block;
+  margin: 0 2rem 0 0;
+}
+.picture {
+  display: flex;
+  text-align: center;
+}
+.lunch {
+  display: block;
+  margin: 0 2rem 0 0;
+}
+.next {
+  text-decoration: none;
+  position: fixed;
+  bottom: -20px;
+}
