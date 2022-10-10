@@ -1,9 +1,4 @@
 /*Universal styles*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 body {
   width: 100vw;
   height: 100vh;
@@ -13,10 +8,12 @@ body {
 /*general styles starts*/
 body {
   position: relative;
-  display: flex;
+  display: block flex;
   z-index: -1;
   background: url(../images/restaurant-sm.jpg) no-repeat center center/ cover;
   transition: all 0.3s ease;
+  font-family: "Mulish", cursive;
+  font-weight: 400;
 }
 i {
   color: white;
@@ -37,7 +34,9 @@ main {
   text-align: center;
 }
 /*main container ends*/
+/*heading styles*/
 
+/*heading styles end*/
 /*media queries start*/
 @media only screen and (min-width: 680px) {
   /*general styles*/
