@@ -17,7 +17,7 @@ body {
 }
 h1 {
   text-align: center;
-  padding: 2px 0 5px;
+  padding: 2px 5px 5px;
   color: blueviolet;
   font-size: 50px;
   position: relative;
@@ -41,7 +41,7 @@ li {
   text-align: center;
   list-style: none;
   margin: 30px 0 35px;
-  padding: 20px 0 30px;
+  padding: 20px 5px 30px;
   transition: all 200ms ease-in-out;
   position: relative;
   top: -50px;
@@ -69,7 +69,7 @@ p {
 button {
   text-align: center;
   display: block;
-  margin: 20px 250% 35px;
+  margin: 20px auto;
   border: 1px solid blueviolet;
   border-radius: 20px;
   padding: 15px 50px;
@@ -78,7 +78,10 @@ button {
   color: blueviolet;
   transition: all 200ms ease-in-out;
   box-shadow: 5px 5px 10px rgba(146, 31, 31, 0.8);
-  width: 100%;
+  position: relative;
+  left: 50%;
+  max-width: 100vw;
+  min-width: 50vw;
 }
 button:hover {
   background-color: #f2d2bd;
@@ -88,7 +91,7 @@ button:hover {
 footer {
   margin-left: 120px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 12px;
   position: fixed;
   bottom: -17px;
@@ -106,8 +109,10 @@ footer {
   background-color: black;
   display: block;
   margin: 10px 15px 5px;
-  width: 6%;
-  height: 98vh;
+  width: 7%;
+  min-width: 8%;
+
+  height: 97vh;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(146, 31, 31, 0.8);
@@ -119,7 +124,7 @@ footer {
   margin: 2px 15px 5px 18px;
   width: 100%;
   max-width: 100vw;
-  height: 100%;
+  height: 50vh;
   position: fixed;
   top: -10px;
   left: 11%;
