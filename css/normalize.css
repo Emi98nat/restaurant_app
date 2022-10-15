@@ -2,8 +2,12 @@
 
 /* Document
    ========================================================================== */
-
-/**
+/* The list of font-family available for to be used on the site. copy and paste where necessary
+font-family: 'Baloo Bhai 2', cursive;
+font-family: 'Mulish', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Recursive', sans-serif;*/
+/* 
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
@@ -13,10 +17,12 @@
   margin: 0;
   font-family: "Helvetica-light", "Helvetica Nueue Light", "Helvetica Nueue",
     Helvetica, Ariel, "Lucida Grande", sans-serif;
+  font-weight: 400;
 }
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-size: 16px;
 }
 
 /* Sections
@@ -33,7 +39,13 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
-
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Mulish", "Helvetica-light", "Helvetica Nueue Light",
+    "Helvetica Nueue", Helvetica, Ariel, "Lucida Grande", san-serif;
+}
 main {
   display: block;
 }
@@ -44,7 +56,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 32px;
   margin: 0.67em 0;
 }
 
@@ -55,7 +67,9 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-
+i {
+  color: white;
+}
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
@@ -83,7 +97,9 @@ a {
   background-color: transparent;
   text-decoration: none;
 }
-
+li {
+  list-style-type: none;
+}
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
