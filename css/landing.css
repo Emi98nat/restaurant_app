@@ -1,34 +1,135 @@
 /*Universal styles*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-html {
-  height: 100%;
-  width: 100%;
+body {
+  width: 100vw;
+  height: 100vh;
 }
 /*Universal styles ends*/
 
 /*general styles starts*/
 body {
-  position: fixed;
+  position: relative;
+  display: block;
   z-index: -1;
   background: url(../images/restaurant-sm.jpg) no-repeat center center/ cover;
-  height: 100vh;
-  width: 100vw;
+  transition: all 0.3s ease;
+  font-family: "Mulish", cursive;
+  font-weight: 400;
 }
 /*general styles ends*/
 /*main container starts*/
 main {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(0, 15, 0, 0.43);
-  height: 100%;
-  width: 100%;
   position: relative;
   z-index: 1;
+  color: #efe;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
 }
 /*main container ends*/
-
+/*header styles*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 8px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.header h1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  margin-bottom: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-15px);
+  animation: mv-right1 2s linear 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes mv-right1 {
+  from {
+    transform: translateX(-15px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.header p {
+  font-size: clamp(0.5rem, 5vw, 0.8rem);
+  line-height: 0.8rem;
+  /*max-width: 60%;*/
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin: 4px auto;
+  padding: 8px 2%;
+  justify-content: center;
+  text-align: justify;
+  visibility: hidden;
+  opacity: 0;
+  animation: mv-left1 2s linear 1.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes mv-left1 {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.p-txt {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    225deg,
+    rgba(0, 255, 0, 1) 0%,
+    rgba(0, 255, 0, 0.8) 29%,
+    rgba(0, 255, 0, 0.6) 67%,
+    rgba(0, 255, 0, 1) 100%
+  );
+  background-size: auto auto;
+  background-size: 200% auto;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 800;
+  animation: text-clip 2s linear infinite;
+}
+@keyframes text-clip {
+  to {
+    background-position: -200% center;
+  }
+}
+/*heading styles end*/
 /*media queries start*/
 @media only screen and (min-width: 680px) {
   /*general styles*/
@@ -38,6 +139,25 @@ main {
   /*main container styles*/
   main {
     background-color: transparent;
+  }
+  /*header styles*/
+  .header {
+    align-content: justify;
+    padding: 4px 12%;
+  }
+  .header h1 {
+    font-size: clamp(2rem, 3vw, 2.25rem);
+    line-height: 2rem;
+  }
+  .header p {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 8px 2%;
+    overflow-x: hidden;
+  }
+  .p-txt {
+    font-size: clamp(2rem, 3vw, 2.25rem);
+    font-weight: 800;
   }
 }
 /*media queries end*/
