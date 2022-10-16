@@ -14,6 +14,8 @@ body {
   transition: all 0.3s ease;
   font-family: "Mulish", cursive;
   font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 /*general styles ends*/
 /*main container starts*/
@@ -45,16 +47,17 @@ main {
   color: #fff;
 }
 .header h1 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   position: relative;
   z-index: 2;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin: 4px 0;
+  padding: 4px 0;
   visibility: hidden;
   opacity: 0;
   transform: translateX(-15px);
-  animation: mv-right1 2s linear 1s;
+  animation: mv-right1 2s cubic-bezier(0.26, 0.23, 0.49, 0.81) 1s;
   animation-fill-mode: forwards;
 }
 @keyframes mv-right1 {
@@ -70,14 +73,15 @@ main {
   }
 }
 .header p {
-  font-size: clamp(0.5rem, 5vw, 0.8rem);
+  font-size: 0.8rem;
+  font-family: "Recursive", cursive;
   line-height: 0.8rem;
   /*max-width: 60%;*/
   height: auto;
   position: relative;
   z-index: 2;
-  margin: 4px auto;
-  padding: 8px 2%;
+  margin-top: 4px;
+  padding: 8px 15px;
   justify-content: center;
   text-align: justify;
   visibility: hidden;
@@ -130,6 +134,222 @@ main {
   }
 }
 /*heading styles end*/
+/*top nav starts*/
+.nav-sm {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 0;
+}
+/*main navigation starts*/
+.sm-links,
+.search,
+.logo,
+.banner {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.sm-links {
+  width: 20%;
+  font-size: 1.6rem;
+  line-height: 100%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.banner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: color 0.1s ease, border 0.2s ease-in-out;
+  cursor: pointer;
+}
+.banner:hover {
+  border: 1px solid greenyellow;
+  color: greenyellow;
+}
+.ban-cont {
+  position: absolute;
+  display: none;
+}
+/*main navigation ends*/
+.logo {
+  background: url(../images/PUPLOGO.png) no-repeat center center/ contain;
+  width: 45%;
+  align-self: center;
+}
+/*search bar starts*/
+.search {
+  width: 35%;
+}
+#search {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  background-image: url("../images/MD-Badsha-Meah.png");
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+  background-size: 15px;
+  padding: 0 18px 0;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.7);
+  overflow: scroll;
+}
+/*search bar ends*/
+/*Large screen navigation starts*/
+.nav-lg {
+  display: none;
+}
+/*top nav ends*/
+
+/*btm nav starts*/
+.nav-btm {
+  position: absolute;
+  top: 55%;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  text-align: center;
+  z-index: -1;
+  height: 30px;
+  width: 100%;
+  padding: 4px 10px;
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.nav-btm a {
+  position: relative;
+  height: 20px;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+  color: #fff;
+}
+.nav-btm a > i {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+/*btm nav ends*/
+/*prompt section start*/
+.prompt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  visibility: 0;
+  animation: show 2s cubic-bezier(0.26, 0.23, 0.5, 0.99) 1.5s forwards;
+}
+@keyframes show {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.btns {
+  display: flex;
+}
+.sign-up,
+.offers {
+  position: relative;
+  border: 4px solid transparent;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.8)
+  );
+  font-family: "Baloo Bhai 2";
+  z-index: 5;
+  width: 90px;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 3px 9px black, inset 0 0 9px hsla(0, 35%, 50%, 1);
+  transition: all 0.3 cubic-bezier(0.26, 0.23, 0.49, 0.81);
+}
+.sign-up:hover,
+.offers:hover {
+  -webkit-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.sign-up:hover::before,
+.offers:hover::before {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: linear-gradient(60deg, orangered, green);
+  mix-blend-mode: lighten;
+  background-size: 200% auto;
+  border-radius: 16px;
+  animation: disco 2s cubic-bezier(0.26, 0.23, 0.49, 0.81) infinite;
+}
+@keyframes disco {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+.sign-up:active,
+.offers:active {
+  border: none;
+  background: linear-gradient(60deg, orangered, green);
+  color: white;
+}
+.sign-up,
+.offers,
+.link {
+  font-family: "Baloo Bhai 2", cursive;
+  color: orangered;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.link {
+  width: 100%;
+  height: 80%;
+}
+.sign-up:active,
+.offers:active,
+.link:active {
+  color: white;
+}
+.customer {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+}
+.log-in {
+  color: lightgreen;
+  transition: color 0.1s ease;
+  font-family: "Baloo Bhai 2", cursive;
+}
+.log-in:hover {
+  color: greenyellow;
+}
+.log-in:active {
+  color: hsla(124, 100%, 60%, 1);
+}
+/*prompt section ends*/
 /*media queries start*/
 @media only screen and (min-width: 680px) {
   /*general styles*/
@@ -158,6 +378,10 @@ main {
   .p-txt {
     font-size: clamp(2rem, 3vw, 2.25rem);
     font-weight: 800;
+  }
+  /*btm Nav-styles*/
+  .nav-btm {
+    display: flex;
   }
 }
 /*media queries end*/

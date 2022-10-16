@@ -27,7 +27,10 @@ html {
 
 /* Sections
    ========================================================================== */
-
+::selection {
+  color: white;
+  background: hsla(120, 100%, 25%, 0.5);
+}
 /**
  * Remove the margin in all browsers.
  */
@@ -56,7 +59,7 @@ main {
  */
 
 h1 {
-  font-size: 32px;
+  font-size: 2em;
   margin: 0.67em 0;
 }
 
